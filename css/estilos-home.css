@@ -1,0 +1,130 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+}
+body h1 {
+  font-family: 'Domine', serif;
+}
+.navbar-nav {
+  color: black;
+}
+article {
+
+}
+nav {
+  background-color: #e3f2fd;
+}
+.barra-busqueda-lg {
+    display: none;
+}
+.container {
+  text-align: center;
+}
+.barra-busqueda-sm {
+    display: flex;
+    width: 100%;
+    flex-flow: row;
+    justify-content: center;
+    margin-top: 30px;
+}
+.bienvenida {
+    margin-top: 30px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.bienvenida h5 {
+    margin-top: 50px;
+}
+.oferta {
+    margin-top: 50px;
+}
+.categorias div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    margin-top: 30px
+}
+.categoria-1 {
+    width: 30%;
+}
+.categoria-2 {
+    width: 30%;
+}
+.categoria-3 {
+    width: 30%;
+}
+.productos {
+    display: flex;
+    width: 100%;
+    flex-flow: column nowrap;
+}
+.productos img {
+    max-width: 100%;
+    padding: 20px;
+}
+.destacados {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+.destacados div {
+    width: 50%;
+}
+.destacados img {
+  max-width: 100%;
+  padding: 10px;
+}
+.titulo-destacados {
+    margin-top: 40px;
+}
+footer {
+  display: flex;
+  flex-wrap: row nowrap;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  }
+footer ul {
+  list-style: none;
+}
+.contacto-redes {
+    float: left;
+}
+.medios-pagos {
+  float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+.caja-productos {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      width: 100%;
+
+}
+.caja-productos div {
+    width: 50%;
+}
+}
+
+@media (min-width: 1024px) {
+    .barra-busqueda-lg {
+        display: block;
+        margin-right: 20px;
+    }
+    .barra-busqueda-sm {
+        display: none;
+    }
+    .login {
+      margin-right: 20px;
+    }
+}
