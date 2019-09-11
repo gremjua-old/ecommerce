@@ -12,6 +12,7 @@ footer {
   margin-top: 10px;
 }
 
+
 footer h6, footer p{
   color: white;
 }
@@ -23,4 +24,7 @@ footer h6{
 }
 .ubicacion{
   padding-left: 20px;
+}
+.iconos{
+  color:white;
 }
