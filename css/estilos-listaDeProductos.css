@@ -1,0 +1,54 @@
+/* Mobile */
+body {
+    width: 100%;
+    margin: 0px;
+    font-size: 16px;
+}
+
+#titulo {
+    width: 100%;
+    overflow: hidden;
+}
+
+h1 {
+    width: 50vw;
+    float: right;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+article {
+    margin: 1em;
+    border: 1px solid black;
+}
+
+.nombreProducto {
+    margin: 0.5em 0 0 0;
+    text-align: center;
+}
+
+.precioProducto {
+    margin: 0.5em 0 0 0;
+    text-align: center;
+}
+
+img {
+    width: 80vw;
+}
+
+/* Tablets */
+@media (min-width: 460px) {
+    
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    
+}
