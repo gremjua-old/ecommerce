@@ -33,6 +33,7 @@ body {
 #row {
   background-color: grey;
   padding: 15px 20px;
+  border: solid 3px black;
 }
 #row2 {
   padding: 10px;
