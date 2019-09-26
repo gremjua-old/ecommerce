@@ -1,4 +1,30 @@
+
 <!DOCTYPE html>
+<?php
+
+  if ($_POST){
+    $nombre = $_POST["nombre"];
+    $apellido = $_POST["apellido"];
+    $contrasenia = $_POST["contrasenia"];
+    $telefono = $_POST["telefono"];
+    $email = $_POST["email"];
+
+    $usuario = [
+      "nombre"=> $nombre,
+      "Contrasenia"=> password_hash($contrasenia, PASSWORD_DEFAULT),
+      "apellido"=> $apellido,
+      "email"=> $email,
+      "telefono"=> $telefono,
+    ];
+    $usuario = json_encode($usuario);
+    var_dump($usuario);
+
+    file_put_contents("usuarios.json", $usuario);
+
+
+  }
+  ?>
+
 <html lang="en" dir="ltr">
 
   <head>

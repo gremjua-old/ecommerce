@@ -6,21 +6,35 @@ button {
   color: blue;
 
 }
-
 footer {
   background-color: black;
   margin-top: 10px;
 }
-
 footer h6, footer p{
   color: white;
 }
-
 footer h6{
   padding-top: 20px;
   padding-left: 20px;
-
 }
 .ubicacion{
   padding-left: 20px;
+}
+.iconos{
+  color:white;
+}
+body {
+  background-color: white;
+  opacity: 0.8;
+}
+.class row {
+  background-color: white;
+}
+#row {
+  background-color: grey;
+  padding: 15px 20px;
+  border: solid 3px black;
+}
+#row2 {
+  padding: 10px;
 }
