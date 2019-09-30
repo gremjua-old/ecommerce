@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+ ?>
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
