@@ -1,6 +1,5 @@
-
-<!DOCTYPE html>
 <?php
+
 $errores = [];
 $usuarioIngresado = '';
 $nombreIngresado = '';
@@ -20,7 +19,6 @@ $confirmarIngresado = '';
     $password = $_POST["password"];
     $confirmar = $_POST["confirmar"];
 
-if($_POST){
   if(empty($_POST["usuario"])){
     $errores["usuario"]="Usuario incorrecto";
   }
@@ -42,7 +40,7 @@ if($_POST){
   if(empty($_POST["confirmar"])){
     $errores["confirmar"]="Contraseña incorrecta";
   }
-}
+
     $usuario = [
       "nombre"=> $nombre,
       "Contrasenia"=> password_hash($password, PASSWORD_DEFAULT),
@@ -52,14 +50,16 @@ if($_POST){
       "password"=> $password,
     ];
 
-    $usuario = json_encode($usuario);
-
-    file_put_contents("usuarios.json", $usuario);
-
-
+    $contenido = file_get_contents("usuarios.json");// obtengo el archivo json
+    $usuarios = json_decode($contenido, true); //transformo el archivo json en un array php
+    $usuarios[]= $usuario;// agrego un nuevo usuario
+    $usuarios = json_encode($usuarios);//transformo el array php en un json
+    file_put_contents("usuarios.json", $usuarios);//coloco el nuevo usuario en el archivo json
+    
   }
   ?>
 
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
   <head>
