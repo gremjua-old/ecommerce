@@ -15,7 +15,7 @@
         
         <main>
             <!-- Imagen -->
-            <section class="product-section">
+            <section class="product-section top">
                 <img class="photo" src="img/img-producto-1.jpg" alt="Producto">
             </section>
             <!-- Nombre y precio -->
@@ -30,7 +30,6 @@
                     <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, temporibus repellat? Recusandae possimus ut, consectetur necessitatibus numquam, nemo ratione impedit sunt eos, cum et magnam cupiditate nulla mollitia aspernatur fuga?
                     <br><br>Aliquip elit irure officia fugiat eu sunt eu officia excepteur esse consequat non. Nostrud magna ad reprehenderit ut qui labore id. Eu ut dolore deserunt culpa voluptate ipsum duis. Laboris anim do do ex laboris ea aliqua Lorem ea ex. Ullamco velit proident incididunt nulla enim. Officia fugiat ullamco est et veniam aliqua. Lorem cillum dolore consequat laborum id sint qui sit labore excepteur incididunt.
                 </p>
-
             </section>
             <!-- Botón de compra -->
             <section class="buy-section">

@@ -1,19 +1,21 @@
-body {
-  font-family: 'Roboto', sans-serif;
-  color: black;
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+/* Mobile */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
 }
+
 body h1 {
   font-family: 'Domine', serif;
 }
-.navbar-nav {
-  color: black;
-}
+
 article {
 
 }
-nav {
-  background-color: #e3f2fd;
-}
+
 .barra-busqueda-lg {
     display: none;
 }
