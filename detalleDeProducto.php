@@ -11,9 +11,8 @@
         <script src="https://use.fontawesome.com/65f6f30092.js"></script>
     </head>
     <body>
-        <header class="main-header">
-            HEADER
-        </header>
+        <?php require_once("./common/header.php")?>
+        
         <main>
             <!-- Imagen -->
             <section class="product-section">
