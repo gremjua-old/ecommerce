@@ -1,3 +1,8 @@
+<?php
+
+session_start();
+
+?>
 
 <!doctype html>
 <html lang="en">
@@ -16,7 +21,7 @@
   <body>
       <header>
           <nav class="navbar navbar-expand-md  navbar-light">
-            
+
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                   <span class="navbar-toggler-icon"></span>
               </button>
@@ -48,7 +53,7 @@
           <article class="">
               <div class="">
                   <div class="bienvenida">
-                      <h1>Bienvenido a nuestro primer E-commerce</h1>
+                      <h1>Bienvenido <?= $_SESSION['usuario']['nombre'] ?? '' ?> a nuestro primer E-commerce</h1>
                       <h5>Enviamos más de 40 millones de productos a todo el país</h5>
                   </div>
                   <div class="oferta">

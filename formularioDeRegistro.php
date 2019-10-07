@@ -1,62 +1,56 @@
 <?php
 
-$errores = [];
-$usuarioIngresado = '';
+$errores = [
+  "password"=>"",
+  "nombre"=>"",
+  "email"=>""
+  ];
 $nombreIngresado = '';
-$apellidoIngresado = '';
-$telefonoIngresado = '';
 $emailIngresado = '';
 $passwordIngresado = '';
-$confirmarIngresado = '';
+
 
 
   if ($_POST){
-    $usuario = $_POST["usuario"];
-    $nombre = $_POST["nombre"];
-    $apellido = $_POST["apellido"];
-    $telefono = $_POST["telefono"];
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-    $confirmar = $_POST["confirmar"];
+  if(empty($_POST["password"]) ){
+    $errores["password"]="Ingrese contraseña";
 
-  if(empty($_POST["usuario"])){
-    $errores["usuario"]="Usuario incorrecto";
+  }elseif (strlen($_POST["password"])<8) {
+    $errores["password"]="Contraseña invalida";
   }
-  if(empty($_POST["password"])){
-    $errores["password"]="Contraseña incorrecta";
+  else {
+    $password = $_POST["password"];
   }
   if(empty($_POST["nombre"])){
     $errores["nombre"]="Escriba su nombre";
-  }
-  if(empty($_POST["apellido"])){
-    $errores["apellido"]="Escriba su apellido";
-  }
-  if(empty($_POST["telefono"])){
-    $errores["telefono"]="Escriba su telefono";
+  }else{
+      $nombreIngresado = $_POST["nombre"];
   }
   if(empty($_POST["email"])){
     $errores["email"]="Escriba su email";
-  }
-  if(empty($_POST["confirmar"])){
-    $errores["confirmar"]="Contraseña incorrecta";
+  }else{
+      $emailIngresado = $_POST["email"];
   }
 
+  if ($errores["password"]=="" &&   $errores["nombre"]=="" &&   $errores["email"]=="") {
     $usuario = [
-      "nombre"=> $nombre,
-      "Contrasenia"=> password_hash($password, PASSWORD_DEFAULT),
-      "apellido"=> $apellido,
-      "email"=> $email,
-      "telefono"=> $telefono,
-      "password"=> $password,
+      "nombre"=> $nombreIngresado,
+      "password"=> password_hash($password, PASSWORD_DEFAULT),
+      "email"=> $emailIngresado,
     ];
-
     $contenido = file_get_contents("usuarios.json");// obtengo el archivo json
     $usuarios = json_decode($contenido, true); //transformo el archivo json en un array php
     $usuarios[]= $usuario;// agrego un nuevo usuario
     $usuarios = json_encode($usuarios);//transformo el array php en un json
     file_put_contents("usuarios.json", $usuarios);//coloco el nuevo usuario en el archivo json
-    
+
   }
+
+
+}
+
+
+
   ?>
 
 <!DOCTYPE html>
@@ -67,7 +61,7 @@ $confirmarIngresado = '';
     <title></title>
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="FormularioDeRegistro.css">
+    <link rel="stylesheet" href="css/estilos-formRegistro.css">
   </head>
   <body>
     <div class="container">
@@ -75,55 +69,56 @@ $confirmarIngresado = '';
     <form class="" action="formularioDeRegistro.php" method="post">
       <div class="form-group">
 
-      <h1 class="titulo">Registrarse</h1>
+        <div class="logo">
+        <img src="img/logo.png" alt="logotipo" width="75px" height="75px">
+        </div>
 
-      <p>
-        <label for="usuario">Usuario:</label>
-        <input type="text" class="form-control" name="usuario" placeholder="" value="<?= $usuarioIngresado ?>">
-         <?= $errores["usuario"] ?? '' ?>
-      </p>
+      <h1 class="titulo">Registrate</h1>
 
       <p>
         <label for="nombre">Nombre:</label>
-        <input type="text" class="form-control" name="nombre" placeholder="Escribi tu nombre" value="<?= $nombreIngresado ?>">
+        <input type="text" class="form-control" name="nombre" placeholder="Nombre" value="<?= $nombreIngresado ?>">
          <?= $errores["nombre"] ?? '' ?>
       </p>
 
-      <p>
-        <label for="apellido">Apellido:</label>
-        <input type="text" name="apellido" class="form-control" placeholder="Escribi tu apellido" value="<?= $apellidoIngresado ?>">
-         <?= $errores["apellido"] ?? '' ?>
-      </p>
+
 
     <p>
       <label for="email">Email:</label>
-      <input type="email" name="email" class="form-control" placeholder="you@example.com" value="<?= $emailIngresado ?>">
+      <input type="email" name="email" class="form-control" placeholder="Dirección de correo electrónico" value="<?= $emailIngresado ?>">
        <?= $errores["email"] ?? '' ?>
     </p>
 
-    <p>
-      <label for="Teléfono">Teléfono:</label>
-      <input type="Teléfono" name="telefono" class="form-control" placeholder="" value="<?= $telefonoIngresado ?>">
-       <?= $errores["telefono"] ?? '' ?>
-    </p>
+
 
     <p>
       <label for="password">Password:</label>
-      <input type="password" class="form-control" name="password" placeholder="" value="<?= $passwordIngresado ?>">
+      <input type="password" class="form-control" name="password" placeholder="Contraseña" value="<?= $passwordIngresado ?>">
        <?= $errores["password"] ?? '' ?>
     </p>
 
-    <p>
-      <label for="confirmar">Confirmar Password</label>
-      <input type="password" class="form-control" name="confirmar" value="<?= $confirmarIngresado ?>">
-       <?= $errores["confirmar"] ?? '' ?>
-    </p>
 
-    <p>
-      <button type="submit" name="" class="btn btn-primary" >Enviar</button>
-    </p>
+
+      <div class="button">
+      <button  type="submit" name="" class="btn btn-primary btn-lg">
+        Crear cuenta
+      </button>
+      </div>
+
+      <div id="caja">
+        ¿Eres miembro?
+      </div>
+
+      <a href= "formularioDeLogin.php#IniciarSesion">
+        Iniciar sesion
+      </a>
+
+
+
 
   </div>
+
+
   </form>
 </div>
 
