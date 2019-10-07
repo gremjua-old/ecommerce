@@ -1,24 +1,20 @@
-<!-- <?php
-
-?> -->
 
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Detalle de producto</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="css/estilos-detalleDeProducto.css">
-        <script src="https://use.fontawesome.com/65f6f30092.js"></script>
+        <?php require_once("./common/bootstrapLink.php")?>
+        <!-- <script src="https://use.fontawesome.com/65f6f30092.js"></script> -->
+        <title>Detalle de producto</title>
+
     </head>
     <body>
-        <header class="main-header">
-            HEADER
-        </header>
+        <?php require_once("./common/header.php")?>
+        
         <main>
             <!-- Imagen -->
-            <section class="product-section">
+            <section class="product-section top">
                 <img class="photo" src="img/img-producto-1.jpg" alt="Producto">
             </section>
             <!-- Nombre y precio -->
@@ -33,7 +29,6 @@
                     <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, temporibus repellat? Recusandae possimus ut, consectetur necessitatibus numquam, nemo ratione impedit sunt eos, cum et magnam cupiditate nulla mollitia aspernatur fuga?
                     <br><br>Aliquip elit irure officia fugiat eu sunt eu officia excepteur esse consequat non. Nostrud magna ad reprehenderit ut qui labore id. Eu ut dolore deserunt culpa voluptate ipsum duis. Laboris anim do do ex laboris ea aliqua Lorem ea ex. Ullamco velit proident incididunt nulla enim. Officia fugiat ullamco est et veniam aliqua. Lorem cillum dolore consequat laborum id sint qui sit labore excepteur incididunt.
                 </p>
-
             </section>
             <!-- Botón de compra -->
             <section class="buy-section">
@@ -41,8 +36,7 @@
             </section>
         </main>
 
-        <footer class="main-footer">
-            FOOTER
-        </footer>
+        <?php require_once("./common/footer.php")?>
+
     </body>
 </html>
