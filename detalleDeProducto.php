@@ -1,4 +1,4 @@
-
+<!doctype html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -38,5 +38,6 @@
 
         <?php require_once("./common/footer.php")?>
 
+        <?php require_once("./common/bootstrapJs.php")?>
     </body>
 </html>
