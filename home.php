@@ -86,25 +86,10 @@ session_start();
 
               </div>
           </section>
-          <footer>
-              <div class="contacto-redes">
-                  <ul>
-                      <li>Contacto</li>
-                      <li><a href="https://www.facebook.com/">Fecebook</a></li>
-                      <li><a href="https://www.Twitter.com/">Twitter</a></li>
-                      <li><a href="https://www.Instragram.com/">Instragram</a></li>
-                  </ul>
-              </div>
-              <div class="medios-pagos">
-              <ul>
-                <li>Medios de Pago</li>
-                <li>Efectivo</li>
-                <li>Tarjetas de crédito</li>
-                <li>Tarjetas de débito</li>
-              </ul>
-              </div>
-          </footer>
       </div>
+
+      <?php require_once("./common/footer.php")?>
+
       <?php require_once("./common/bootstrapJs.php")?>
   </body>
 </html>
