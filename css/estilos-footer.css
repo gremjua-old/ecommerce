@@ -1,0 +1,21 @@
+.socialMedia {
+    color: #888;
+    font-size: 180%;
+    transition: color 0.5s;
+}
+
+.logo-facebook:hover {
+    color: #3b5998
+}
+
+.logo-twitter:hover {
+    color: #00aced
+}
+
+.logo-instagram:hover {
+    color: #517fa4
+}
+
+.logo-github:hover {
+    color: #6cc644
+}
