@@ -9,31 +9,23 @@
 
       <!-- Grid column -->
       <div class="col-md-12 py-5">
-        <div class="mb-5 flex-center">
+        <div class="flex-center">
 
           <!-- Facebook -->
-          <a class="fb-ic">
-            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          <a class="socialMedia" href="https://www.facebook.com/">
+              <ion-icon class="logo-facebook" name="logo-facebook"></ion-icon>
           </a>
           <!-- Twitter -->
-          <a class="tw-ic">
-            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!-- Google +-->
-          <a class="gplus-ic">
-            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!--Linkedin -->
-          <a class="li-ic">
-            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          <a class="socialMedia" href="https://twitter.com/">
+              <ion-icon class="logo-twitter" name="logo-twitter"></ion-icon>
           </a>
           <!--Instagram-->
-          <a class="ins-ic">
-            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          <a class="socialMedia" href="https://www.instagram.com/">
+              <ion-icon class="logo-instagram" name="logo-instagram"></ion-icon>
           </a>
-          <!--Pinterest-->
-          <a class="pin-ic">
-            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+          <!--Github-->
+          <a class="socialMedia" href="https://github.com/">
+              <ion-icon class="logo-github" name="logo-github"></ion-icon>
           </a>
         </div>
       </div>
