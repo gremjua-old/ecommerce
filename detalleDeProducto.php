@@ -32,7 +32,8 @@
             </section>
             <!-- Botón de compra -->
             <section class="buy-section">
-                <i class="fas fa-shopping-cart"></i>
+                <ion-icon name="cart" id="cart-icon"></ion-icon>
+                <ion-icon name="add" id="add-icon"></ion-icon>
             </section>
         </main>
 

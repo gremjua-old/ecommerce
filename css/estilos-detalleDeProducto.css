@@ -36,13 +36,26 @@
     font-size: 1.1em;
 }
 
-.buy-section i{
+.buy-section {
     font-size: 3em;
-    color: blue;
-    background-color: black;
     position: fixed;
     bottom:0;
-    right:0;
+    right: 10px;
+}
+
+#cart-icon{
+    border-radius: 50%;
+    border: solid 1px black;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 5px 5px;
+}
+
+#add-icon{
+    font-size: 0.4em;
+    left: 1px;
+    top: 20px;
+    position: absolute;
 }
 
 
