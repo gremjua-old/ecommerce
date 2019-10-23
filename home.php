@@ -11,7 +11,7 @@ session_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- CSS -->
-    <link rel="stylesheet" href="css/estilos-home.css">
+    <link rel="stylesheet" href="css/home.css">
     <!-- Google Fonts CSS -->
     <link href="https://fonts.googleapis.com/css?family=Domine|Roboto&display=swap" rel="stylesheet">
     <?php require_once("./common/bootstrapLink.php")?>

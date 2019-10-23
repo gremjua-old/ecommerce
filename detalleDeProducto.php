@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="css/estilos-detalleDeProducto.css">
+        <link rel="stylesheet" href="css/detalleDeProducto.css">
         <?php require_once("./common/bootstrapLink.php")?>
         <!-- <script src="https://use.fontawesome.com/65f6f30092.js"></script> -->
         <title>Detalle de producto</title>
